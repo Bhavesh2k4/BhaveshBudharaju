@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.11.1",
-    "npm": "10.2.4"
+    "node": "20.0.0",
+    "npm": "10.0.0"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
