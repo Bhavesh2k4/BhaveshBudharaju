@@ -1,0 +1,56 @@
+/*input*/
+input,textarea {
+  height: 50px;
+  border: 1px solid #a89999;
+  width: 100%;
+  padding-left: 30px;
+}
+input::placeholder,
+textarea::placeholder {
+  text-indent: 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #000000;
+}
+
+textarea{
+  height:80px;
+  padding-top: 10px;
+}
+
+* width */::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(57, 223, 223);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #363333;
+}
+
+i {
+  cursor: pointer
+}
+
+i:hover {
+  color: rgb(43, 228, 228);
+  font-size: 20px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+
