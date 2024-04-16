@@ -15,7 +15,7 @@ function App() {
   const getPortfolioData=async()=>{
     try{
       dispatch(showLoading());
-      const response=await axios.get("/api/portfolio/get-portfolio-data");
+      const response=await axios.get("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/get-portfolio-data");
       dispatch(SetPortfolioData(response.data));
       dispatch(reloadData(false));
       dispatch(hideLoading());

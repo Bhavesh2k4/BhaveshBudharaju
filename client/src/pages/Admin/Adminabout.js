@@ -13,7 +13,7 @@ function Adminabout() {
   const onFinish = async (values) => {
     try {
       dispatch(showLoading())
-      const response = await axios.post("/api/portfolio/update-about", {
+      const response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/update-about", {
         ...values,
         _id: portfolioData.about._id,
       });

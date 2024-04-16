@@ -24,7 +24,7 @@ function Adminskills() {
   const onFinish = async (values) => {
     try {
       dispatch(showLoading())
-      const response = await axios.post("/api/portfolio/update-skills", {
+      const response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/update-skills", {
         _id: portfolioData.skills[0]._id,
         languages,
         frontend,

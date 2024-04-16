@@ -16,7 +16,7 @@ function Admin() {
   const {portfolioData}=useSelector((state)=>state.root);
   useEffect(()=>{
     if(!localStorage.getItem("token")){
-      window.location.href="/login";
+      window.location.href="https://bhavesh-portfolio-backend.vercel.app/login";
     }
   },[])
 
