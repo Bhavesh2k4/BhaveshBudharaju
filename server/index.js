@@ -1,5 +1,6 @@
 const express=require('express');
 const app=express();
+app.use(express.json());
 require("dotenv").config();
 require("./config/dbConfig");
 const portfolioRoute=require("./routes/portfolioRoute");
@@ -17,7 +18,6 @@ app.use("/api/portfolio",portfolioRoute);
 app.listen(port,()=>{
     console.log(`server running on port ${port}`);
 });
-app.use(express.json());
 app.use("/",(req,res)=>{
     res.status(404).send("server is running");
 });

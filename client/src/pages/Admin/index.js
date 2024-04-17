@@ -14,7 +14,11 @@ const { TabPane } = Tabs;
 
 function Admin() {
   const {portfolioData}=useSelector((state)=>state.root);
-
+  useEffect(()=>{
+    if(!localStorage.getItem("token")){
+      window.location.href="/login";
+    }
+  },[])
 
 
   return (
