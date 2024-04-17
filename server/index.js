@@ -10,7 +10,7 @@ const port=process.env.PORT || 5050;
 
 app.use(
   cors({
-      origin:["https://bhavesh-budharaju-portfolio.vercel.app"],
+      origin:'*',
       methods:['GET', 'POST'],
       credentials: true,
 }));
