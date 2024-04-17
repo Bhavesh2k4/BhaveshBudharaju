@@ -18,13 +18,13 @@ function Adminprojects() {
           dispatch(showLoading())
           let response
           if (seletedItemForEdit){
-          response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/update-project", {
+          response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/update-project", {
             ...values,
              _id: seletedItemForEdit._id,
           });
         }
         else {
-          response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/add-project", {
+          response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/add-project", {
             ...values,
           });
         }
@@ -47,7 +47,7 @@ function Adminprojects() {
       const onDelete=async(item)=>{
         try {
           dispatch(showLoading())
-          const response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/delete-project", {
+          const response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/delete-project", {
             _id: item._id,
           });
           dispatch(hideLoading())

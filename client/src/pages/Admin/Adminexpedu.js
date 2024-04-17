@@ -16,13 +16,13 @@ function Adminexpedu() {
           dispatch(showLoading())
           let response
           if (seletedItemForEdit){
-          response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/update-experience", {
+          response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/update-experience", {
             ...values,
              _id: seletedItemForEdit._id,
           });
         }
         else {
-          response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/add-experience", {
+          response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/add-experience", {
             ...values,
           });
         }
@@ -45,7 +45,7 @@ function Adminexpedu() {
       const onDelete=async(item)=>{
         try {
           dispatch(showLoading())
-          const response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/delete-experience", {
+          const response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/delete-experience", {
             _id: item._id,
           });
           dispatch(hideLoading())

@@ -13,12 +13,12 @@ const dispatch=useDispatch();
 const login=async()=>{
     try{
         dispatch(showLoading());
-        const response=await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/login",user);
+        const response=await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/login",user);
         dispatch(hideLoading());
             if(response.data.success){
                 message.success(response.data.message);
                 localStorage.setItem("token",JSON.stringify(response.data));
-                window.location.href="https://bhavesh-portfolio-backend.vercel.app/admin";
+                window.location.href="https://bhavesh-budharaju.vercel.app/admin";
             }
             else{
                 message.error(response.data.message);

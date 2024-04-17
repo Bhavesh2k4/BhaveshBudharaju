@@ -13,7 +13,7 @@ function Adminwelcome() {
   const onFinish = async (values) => {
     try {
       dispatch(showLoading())
-      const response = await axios.post("https://bhavesh-portfolio-backend.vercel.app/api/portfolio/update-intro", {
+      const response = await axios.post("https://bhavesh-budharaju.vercel.app/api/portfolio/update-intro", {
         ...values,
         _id: portfolioData.intros._id,
       });
