@@ -18,7 +18,7 @@ const login=async()=>{
             if(response.data.success){
                 message.success(response.data.message);
                 localStorage.setItem("token",JSON.stringify(response.data));
-                window.location.href="https://bhavesh-budharaju.vercel.app/admin";
+                window.location.href="/admin";
             }
             else{
                 message.error(response.data.message);
