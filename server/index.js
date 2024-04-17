@@ -5,7 +5,7 @@ require("./config/dbConfig");
 const portfolioRoute=require("./routes/portfolioRoute");
 const cors = require('cors');
 app.use(express.json());
-app.use("https://bhavesh-budharaju.vercel.app/api/portfolio",portfolioRoute);
+app.use("/api/portfolio",portfolioRoute);
 const port=process.env.PORT || 5050;
 
 app.use(
