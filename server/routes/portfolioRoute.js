@@ -3,7 +3,7 @@ const {Intro,About,Skills,Experience,Projects,Contact} = require("../models/port
 const User= require("../models/userModel");
 
 //get all portfolio data
-router.get("/get-portfolio-data",async(req,res)=>{
+router.get("https://bhavesh-portfolio-backend.vercel.app/get-portfolio-data",async(req,res)=>{
     try{
         const intros=await Intro.find();
         const about=await About.find();
@@ -25,7 +25,7 @@ router.get("/get-portfolio-data",async(req,res)=>{
 });
 
 //update intro 
-router.post("/update-intro", async (req, res) => {
+router.post("https://bhavesh-portfolio-backend.vercel.app/update-intro", async (req, res) => {
   try {
     const { firstName, lastName, caption, description, profilePictureUrl, resumeUrl } = req.body;
     const intros = await Intro.findOneAndUpdate(
@@ -44,7 +44,7 @@ router.post("/update-intro", async (req, res) => {
 });
 
   //update about
-  router.post("/update-about", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/update-about", async (req, res) => {
     try {
       const { aboutAnimation ,descPara1,descPara2 } = req.body;
       const about = await About.findOneAndUpdate(
@@ -63,7 +63,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //update skills
-  router.post("/update-skills", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/update-skills", async (req, res) => {
     try {
       const { _id, languages, frontend, backend } = req.body;
       const updatedSkills = await Skills.findOneAndUpdate(
@@ -82,7 +82,7 @@ router.post("/update-intro", async (req, res) => {
   });
   
   //add experience/education
-  router.post("/add-experience", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/add-experience", async (req, res) => {
     try {
       const { period, company, title, description } = req.body;
       const newExperience = new Experience({
@@ -103,7 +103,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //update experience
-  router.post("/update-experience", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/update-experience", async (req, res) => {
     try {
       const { _id, period, company, title, description } = req.body;
       const updatedExperience = await Experience.findOneAndUpdate(
@@ -122,7 +122,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //delete experience
-  router.post("/delete-experience", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/delete-experience", async (req, res) => {
     try {
       const { _id } = req.body;
       await Experience.findOneAndDelete({ _id });
@@ -136,7 +136,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //add project
-  router.post("/add-project", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/add-project", async (req, res) => {
     try {
       const { title, description, link, image,technologies } = req.body;
       const newProject = new Projects({
@@ -158,7 +158,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //update project
-  router.post("/update-project", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/update-project", async (req, res) => {
     try {
       const { _id, title, description, link, image,technologies } = req.body;
       const updatedProject = await Projects.findOneAndUpdate(
@@ -177,7 +177,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //delete project
-  router.post("/delete-project", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/delete-project", async (req, res) => {
     try {
       const { _id } = req.body;
       await Projects.findOneAndDelete({ _id });
@@ -191,7 +191,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
   //update contact
-  router.post("/update-contact", async (req, res) => {
+  router.post("https://bhavesh-portfolio-backend.vercel.app/update-contact", async (req, res) => {
     try {
       const { Name,Mobile,Address,Email} = req.body;
       const contacts = await Contact.findOneAndUpdate(
@@ -210,7 +210,7 @@ router.post("/update-intro", async (req, res) => {
   });
 
 //admin login
-router.post('/login', async (req, res) => {
+router.post('https://bhavesh-portfolio-backend.vercel.app/login', async (req, res) => {
   try {
       const user = await User.findOne({
       username: req.body.username,
