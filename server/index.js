@@ -4,8 +4,6 @@ require("dotenv").config();
 require("./config/dbConfig");
 const portfolioRoute=require("./routes/portfolioRoute");
 const cors = require('cors');
-app.use(express.json());
-app.use("/api/portfolio",portfolioRoute);
 const port=process.env.PORT || 5050;
 
 app.use(
@@ -15,10 +13,11 @@ app.use(
       credentials: true,
 }));
 
+app.use("/api/portfolio",portfolioRoute);
 app.listen(port,()=>{
     console.log(`server running on port ${port}`);
 });
-
+app.use(express.json());
 app.use("/",(req,res)=>{
     res.status(404).send("server is running");
 });
