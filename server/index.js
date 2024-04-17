@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use("/api/portfolio",portfolioRoute);
 const port=process.env.PORT || 5050;
-const allowedOrigins = [''];
+const allowedOrigins = ['https://bhavesh-budharaju-portfolio.vercel.app'];
 app.use(
   cors({
     origin: function (origin, callback) {
