@@ -9,7 +9,6 @@ import Contact from "./Contact"
 import Footer from "./Footer"
 import Social from "./Social"
 import {useSelector} from "react-redux";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function Home(){
     const {loading,portfolioData}=useSelector((state)=>state.root);
@@ -29,7 +28,6 @@ function Home(){
             <Contact/>
             <Footer/>
             <Social/>
-            <SpeedInsights />
             </div>
             )}
         </div>
